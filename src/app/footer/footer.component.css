@@ -1,0 +1,19 @@
+.footer-copyright{
+	background-color: black;
+	color: white;
+}
+
+div{
+	background-color: black;
+	height: 80px;
+}
+
+footer a{
+	display: block;
+	width: 30px;
+	height: 30px;
+}
+
+fa{
+	color:yellow;
+}
