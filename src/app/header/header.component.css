@@ -1,0 +1,18 @@
+
+
+body{
+	background-color: white;
+}
+
+nav img{
+	height: 50px;
+	width: 250px
+}
+
+body header nav div ul li a{
+	color:yellow;
+}
+
+.navbar{
+	background-color: black;
+}
