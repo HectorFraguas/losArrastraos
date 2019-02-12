@@ -42,3 +42,10 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+src/assets/miembros/david.jpg
+src/assets/miembros/cristian.jpg
+src/assets/favicon.ico.png
+src/assets/miembros/sergio.jpg
+src/assets/miembros/mario.jpg
+src/assets/miembros/jorge.jpg
+src/assets/miembros/hector.jpg

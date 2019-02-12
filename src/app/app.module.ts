@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { EventosComponent } from './eventos/eventos.component';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { EventosComponent } from './eventos/eventos.component';
     QuienesSomosComponent,
     ContactoComponent,
     LogInComponent,
-    EventosComponent
+    EventosComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,10 +1,10 @@
 .footer-copyright{
-	background-color: black;
+	background-color: #1F2226;
 	color: white;
 }
 
 div{
-	background-color: black;
+	background-color: #1F2226;
 	height: 80px;
 }
 
@@ -15,5 +15,5 @@ footer a{
 }
 
 fa{
-	color:yellow;
+	color:#f8b500;
 }

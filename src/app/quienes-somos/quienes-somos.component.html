@@ -1,3 +1,35 @@
-<p>
-  quienes-somos works!
-</p>
+<div class="container">
+
+  <h2>QUIENES SOMOS</h2>
+
+  <div class="row">
+
+    <div class="hero mx-auto">
+      <img class="fotoCabecera" src="../../assets/banner3.png" alt="">
+    </div>
+
+  </div>
+
+  <p class="col-xl-12 col-md-8 col-xs-12 mx-auto">Los Arrastraos nace en 2012 en Alcalá de Henares de la mano de 4
+    amigos amantes de las motos y aficionados a las rutas y rodadas en circuito.<br>
+    Organizamos y colaboramos en eventos, reuniones y rutas en moto, normalmente por la zona de Madrid y Guadalajara,
+    para disfrutar de curvas y carreteras tranquilas y secundarias... y si además comemos bien, mejor! <br>
+    Si quieres unirte a nosotros, eres Bienvenido!</p>
+
+  <h3 class="mt-5 mb-4">MIEMBROS</h3>
+
+  <div class="row">
+
+    <div class="col-xl-4 col-md-6 col-xs-12 text-center" *ngFor="let miem of miembros">
+
+      <img class="foto" src="../../assets/miembros/{{miem.foto}}">
+
+      <h4 class="text-center mt-3">{{miem.nombre}}</h4>
+      <h5 class="text-center">{{miem.cargo}}</h5>
+      <h5 class="moto text-center mb-5">{{miem.moto}}</h5>
+
+    </div>
+
+  </div>
+
+</div>

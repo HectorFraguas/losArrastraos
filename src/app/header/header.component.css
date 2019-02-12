@@ -4,10 +4,19 @@ nav img {
 }
 
 a {
-  color: yellow !important;
+  color: #f8b500 !important;
 }
 
 .navbar {
-  background-color: black;
-  color: yellow;
+  background-color: #1F2226;
+  color: #f8b500;
 }
+
+.navbar-toggler {
+  background-color: #f8b500;
+  border: 1px solid #f8b500;
+  color:#1F2226;
+  text-align: center;
+  padding: 0 auto;
+}
+

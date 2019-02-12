@@ -1,0 +1,29 @@
+.container {
+  background-color: #1F2226;
+}
+
+.row {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.bg-info {
+  background-color: #1F2226 !important;
+  color: white;
+}
+
+.btn-info {
+  color: #1F2226;
+  background-color: #FFC312;
+  border-color: #1F2226;
+}
+
+.input-group-text {
+  color: #495057;
+  background-color: #FFC312;
+  border: 1px solid #FFC312;
+}
+
+.text-info {
+  color: #1F2226 !important;
+}
