@@ -1,0 +1,98 @@
+.logo{
+    width: 100%;
+    height: 100%;  
+}
+
+.fotoPortada{
+    width: 400px;
+}
+
+ /*smain .imagenes{
+	background-color: red;
+	width: 100%;
+	margin-top: -30px;
+}
+
+main .imagenes article{
+	float: left;
+	width: 50%;
+	margin-bottom: -5px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+main .imagenes article .velo{
+	position: absolute;
+	top:0px;
+	left: 0px;
+	background-color: rgba(0,0,0,0.5);	
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: 1s;
+}
+
+main .imagenes article:hover .velo{
+	opacity: 1;
+}
+
+main .imagenes article h3, main .imagenes article h4{
+	position: relative;
+	top: 45%;
+	color: white;
+	text-align: center;
+}
+
+main .imagenes article h4{
+	left: -500px;
+	transition: 1s;
+}
+
+main .imagenes article h3{
+	left: 500px;
+	transition: 1s;
+}
+
+main .imagenes article:hover h3, main .imagenes article:hover h4{
+	left: 0px;
+}
+
+main .imagenes article img{
+	transition: 1s;
+}
+
+main .imagenes article:hover img{
+	transform: rotateZ(10deg) scale(1.5);
+}
+
+.lightBox{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5);
+	top: 0px;
+	left: 0px;
+	text-align: center;
+	display: none;
+}
+
+.lightBox .modal{
+	background-color: white;
+	border: 3px solid white;
+	max-width: 900px;
+	margin: 20px auto; 
+	position: relative;
+	opacity: 0;
+}
+
+.lightBox .modal .close{
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	right: -16px;
+	top:-16px;
+	cursor:pointer;
+	border-radius: 50%;
+	background-color: white;
+} */
