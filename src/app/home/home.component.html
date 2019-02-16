@@ -1,40 +1,36 @@
 <div class="container">
 
   <div class="row">
-    <img class="logo mx-auto" src="../../assets/logo1bis2.png" alt="">
+    <img class="logo col-xl-6 col-ml-8 col-xs-6 mx-auto mb-5" src="../../assets/logoPortada.png" alt="">
   </div>
-
-
 
   <div class="row">
 
-    <div class="col-6">
-
-      <div class="imagenes">
-
-        <div>
-          <img class="fotoPortada" src="../../assets/portada1.jpg" alt="">
-        </div>
-        <div>
-          <img class="fotoPortada" src="../../assets/portada2.jpg" alt="">
-        </div>
-        <div>
-          <img class="fotoPortada" src="../../assets/portada3.jpg" alt="">
-        </div>
-        <div>
-          <img class="fotoPortada" src="../../assets/portada4.jpg" alt="">
-        </div>
-
+    <div [routerLink]="['/eventos']" class="col-xl-6 col-ml-8 col-xs-12 text-center mx-auto mb-4">
+      <div>
+        <img class="fotoPortada" src="../../assets/portada1.jpg" alt="">
       </div>
-
+      <h4>Eventos</h4>
+    </div>
+    <div class="col-xl-6 col-ml-8 col-xs-12 text-center mx-auto mb-4">
+      <div>
+        <img class="fotoPortada" src="../../assets/portada4.jpg" alt="">
+      </div>
+      <h4>Galeria</h4>
+    </div>
+    <div [routerLink]="['/quienes-somos']" class="col-xl-6 col-ml-8 col-xs-12 text-center mx-auto mb-4">
+      <div>
+        <img class="fotoPortada" src="../../assets/portada3.jpg" alt="">
+      </div>
+      <h4>Quienes somos</h4>
+    </div>
+    <div [routerLink]="['/contacto']" class="col-xl-6 col-ml-8 col-xs-12 text-center mx-auto mb-4">
+      <div>
+        <img class="fotoPortada" src="../../assets/portada2.jpg" alt="">
+      </div>
+      <h4>Contacto</h4>
     </div>
 
   </div>
-
-
-
-
-
-
 
 </div>

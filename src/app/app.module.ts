@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { RegistroComponent } from './registro/registro.component';
+import { FormularioRutaComponent } from './formulario-ruta/formulario-ruta.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,16 @@ import { RegistroComponent } from './registro/registro.component';
     ContactoComponent,
     LogInComponent,
     EventosComponent,
-    RegistroComponent
+    RegistroComponent,
+    FormularioRutaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

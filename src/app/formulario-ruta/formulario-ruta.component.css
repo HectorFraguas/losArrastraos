@@ -1,0 +1,29 @@
+label{
+    color: #FFC312;
+}
+h2{
+    color:white ;
+}
+
+select option{
+    color: black;
+}
+select{
+    color:black;
+}
+button{
+    width: 200px;
+    background-color:#FFC312;
+    color:black;
+    border: 0px; 
+}
+
+input{
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+textarea{
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
