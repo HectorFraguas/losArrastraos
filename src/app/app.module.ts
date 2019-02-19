@@ -15,6 +15,7 @@ import { LogInComponent } from './log-in/log-in.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { RegistroComponent } from './registro/registro.component';
 import { FormularioRutaComponent } from './formulario-ruta/formulario-ruta.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FormularioRutaComponent } from './formulario-ruta/formulario-ruta.compo
     LogInComponent,
     EventosComponent,
     RegistroComponent,
-    FormularioRutaComponent
+    FormularioRutaComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,

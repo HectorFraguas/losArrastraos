@@ -10,20 +10,27 @@ select option{
 }
 select{
     color:black;
+    width: 400px;
 }
 button{
-    width: 200px;
+    width: 220px;
+    height: 40px;
     background-color:#FFC312;
     color:black;
-    border: 0px; 
+    border: 0px;
+    border-radius: .25rem; 
+    cursor: pointer;
 }
 
 input{
     border: 1px solid #ced4da;
     border-radius: .25rem;
+    width: 400px;
 }
 
 textarea{
     border: 1px solid #ced4da;
     border-radius: .25rem;
+    width: 400px;
+    height: 200px;
 }

@@ -12,7 +12,9 @@
   color: white;
 }
 
-.btn-info {
+.btn {
+  border-radius: .25rem;
+  width: 300px;
   color: #1F2226;
   background-color: #FFC312;
   border-color: #1F2226;
