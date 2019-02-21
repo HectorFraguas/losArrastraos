@@ -1,0 +1,41 @@
+*{
+    color:white;
+}
+
+.cuadro{
+    border: 2px solid #FFC312;
+}
+
+img{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+
+.foto{
+    background-color: #FFC312;
+    color: black;
+    border: black;
+    cursor: pointer;
+    border-radius: .25rem;
+}
+
+h5{
+    color:#FFC312 ;
+}
+
+button{
+    background-color: #FFC312;
+    color: black;
+    border: black;
+    cursor: pointer;
+    border-radius: .25rem;
+    width: 200px;
+    
+}
+
+input{
+    width: 300px;
+    color:black;
+}
+
