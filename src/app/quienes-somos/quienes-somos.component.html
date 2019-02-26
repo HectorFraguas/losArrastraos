@@ -22,7 +22,11 @@
 
     <div class="col-xl-4 col-md-6 col-xs-12 text-center" *ngFor="let miem of miembros">
 
-      <img class="foto" src="../../assets/miembros/{{miem.foto}}">
+      <div class="borrar mb-3">
+        <button (click)="borrarSocio(miem.id)">Borrar</button>
+      </div>
+
+      <img class="foto" src="{{miem.foto}}">
 
       <h4 class="text-center mt-3">{{miem.nombre}}</h4>
       <h5 class="text-center">{{miem.cargo}}</h5>
@@ -30,6 +34,12 @@
 
     </div>
 
+  </div>
+
+  <div class="row">
+    <div class="mx-auto mt-5 mb-5">
+    <button [routerLink]="['/formulario-miembro']">Añadir socio</button>
+  </div>
   </div>
 
 </div>

@@ -9,14 +9,23 @@ import { Miembro } from './models/miembro.models';
 export class MiembrosService {
 
   url: string
+  id: number
+  miembros: Miembro[]
+
 
   constructor(private httpClient: HttpClient) {
 
-    this.url = 'https://losarrastraos-f55f6.firebaseio.com/personas.json'
+
+    this.url = 'http://localhost:3000/socios/'
    }
 
    getMiembros(){
 
    return this.httpClient.get<Miembro[]>(this.url)
+   }
+
+   borrarSocio(miemId){
+
+    return this.httpClient.get( `${this.url}/delete/${miemId}`)
    }
 }

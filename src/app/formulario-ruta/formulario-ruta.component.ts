@@ -35,14 +35,15 @@ export class FormularioRutaComponent implements OnInit {
         Validators.required,
         Validators.maxLength(200)
       ])
-
-
     })
   }
 
 
   enviarFormulario() {
     
+    
+
+
   }
 
 }

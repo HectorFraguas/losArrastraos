@@ -16,6 +16,7 @@ import { EventosComponent } from './eventos/eventos.component';
 import { RegistroComponent } from './registro/registro.component';
 import { FormularioRutaComponent } from './formulario-ruta/formulario-ruta.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { FormularioMiembroComponent } from './formulario-miembro/formulario-miembro.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PerfilComponent } from './perfil/perfil.component';
     EventosComponent,
     RegistroComponent,
     FormularioRutaComponent,
-    PerfilComponent
+    PerfilComponent,
+    FormularioMiembroComponent
   ],
   imports: [
     BrowserModule,

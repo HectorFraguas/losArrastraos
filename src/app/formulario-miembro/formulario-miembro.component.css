@@ -1,0 +1,22 @@
+label{
+    color: #FFC312;
+}
+h2{
+    color:white ;
+}
+
+button{
+    width: 220px;
+    height: 40px;
+    background-color:#FFC312;
+    color:black;
+    border: 0px;
+    border-radius: .25rem; 
+    cursor: pointer;
+}
+
+input{
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    width: 400px;
+}

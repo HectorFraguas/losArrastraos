@@ -1,0 +1,32 @@
+<h2 class="text-center mt-3 mb-5">AGREGA SOCIO</h2>
+
+<form novalidate [formGroup]="formRegistro" (ngSubmit)="enviarSocio()">
+  <div class="row">
+
+    <div class="col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mb-3">
+      <label>Nombre</label><br>
+      <input type="text" formControlName="nombre">
+    </div>
+
+    <div class="col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mb-3">
+      <label>Moto</label><br>
+      <input type="text" formControlName="moto">
+    </div>
+
+    <div class="col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mb-3">
+      <label>Puesto en el club</label><br>
+      <input type="text" formControlName="cargo">
+    </div>
+
+    <div class="col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mb-3">
+      <label>Foto URL</label><br>
+      <input type="text" formControlName="foto">
+    </div>
+
+    <div class="col-xl-12 col-ml-8 col-xs-6 text-center mt-3">
+      <button type="submit" class="">Enviar socio</button>
+    </div>
+
+  </div>
+</form>
+

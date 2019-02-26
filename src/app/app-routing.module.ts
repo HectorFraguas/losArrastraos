@@ -8,6 +8,7 @@ import { EventosComponent } from './eventos/eventos.component';
 import { RegistroComponent } from './registro/registro.component';
 import { FormularioRutaComponent } from './formulario-ruta/formulario-ruta.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { FormularioMiembroComponent } from './formulario-miembro/formulario-miembro.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -19,6 +20,8 @@ const routes: Routes = [
   { path: 'registrarse', component: RegistroComponent },
   { path: 'formulario-ruta', component: FormularioRutaComponent },
   { path: 'perfil', component: PerfilComponent },
+  { path: 'formulario-miembro', component: FormularioMiembroComponent },
+
   { path: '**', redirectTo: 'home' }
 ];
 

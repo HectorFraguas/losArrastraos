@@ -24,6 +24,10 @@ export class QuienesSomosComponent implements OnInit {
   ngOnInit() {
   }
 
+  borrarSocio(miemId){
+    this.miembrosService.borrarSocio(miemId).subscribe((res) => {
+    })
+  }
  
 
 }
