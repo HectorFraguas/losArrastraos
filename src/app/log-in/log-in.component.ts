@@ -30,7 +30,7 @@ export class LogInComponent implements OnInit {
   enviarLogin(){
     this.registrarservice.enviarLogin(this.formRegistro.value).subscribe((res) => {
       this.router.navigate(['/home'])
-      console.log(res)
+    
       if(res['error']){
         console.log('ERROR')
       }else{
@@ -39,7 +39,4 @@ export class LogInComponent implements OnInit {
       }
     })
   }
-
-
-
 }

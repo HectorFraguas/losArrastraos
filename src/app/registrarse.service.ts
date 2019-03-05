@@ -32,8 +32,6 @@ export class RegistrarseService {
     else{
       return false
     }
-
     // return localstorage.getItem('token')? true:false
-    
   }
 }
