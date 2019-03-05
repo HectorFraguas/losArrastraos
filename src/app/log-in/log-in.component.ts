@@ -29,8 +29,14 @@ export class LogInComponent implements OnInit {
 
   enviarLogin(){
     this.registrarservice.enviarLogin(this.formRegistro.value).subscribe((res) => {
-      console.log(res)
       this.router.navigate(['/home'])
+      console.log(res)
+      if(res['error']){
+        console.log('ERROR')
+      }else{
+        console.log('ENTRA')
+        localStorage.setItem('token', JSON.stringify(res));
+      }
     })
   }
 

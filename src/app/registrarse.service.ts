@@ -23,4 +23,17 @@ export class RegistrarseService {
     console.log(value)
     return this.httpclient.post(`${this.url}login`, {usuario: value.usuario, clave: value.clave})
   }
+
+  comprobarToken(){
+
+    if (localStorage.getItem('token')){
+      return true
+    }
+    else{
+      return false
+    }
+
+    // return localstorage.getItem('token')? true:false
+    
+  }
 }

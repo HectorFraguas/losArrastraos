@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegistrarseService } from '../registrarse.service';
 
 @Component({
   selector: 'header',
@@ -7,13 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public registrarseService: RegistrarseService) { }
 
   ngOnInit() {
+    console.log(this.registrarseService.comprobarToken())
   }
 
-  isLogin(){
-    
-  }
 
 }
