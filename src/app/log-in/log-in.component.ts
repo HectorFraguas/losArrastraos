@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { RegistrarseService } from '../registrarse.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'log-in',
@@ -7,9 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogInComponent implements OnInit {
 
-  constructor() { }
+  formRegistro: FormGroup
+
+  constructor(private registrarservice: RegistrarseService, private router: Router) {
+    this.formRegistro = new FormGroup({
+      usuario: new FormControl('', [
+        Validators.required,
+      ]),
+      clave: new FormControl('', [
+        Validators.required,
+      ])
+    })
+   }
 
   ngOnInit() {
   }
+
+
+  enviarLogin(){
+    this.registrarservice.enviarLogin(this.formRegistro.value).subscribe((res) => {
+      this.router.navigate(['/home'])
+    })
+  }
+
+
 
 }

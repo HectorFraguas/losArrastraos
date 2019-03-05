@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormularioRutaService } from '../formulario-ruta.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-ruta',
@@ -10,7 +12,7 @@ export class FormularioRutaComponent implements OnInit {
 
   formRegistro: FormGroup
 
-  constructor() { }
+  constructor(private formularioRutaService: FormularioRutaService, private router: Router) { }
 
   ngOnInit() {
     this.formRegistro = new FormGroup({
@@ -34,16 +36,16 @@ export class FormularioRutaComponent implements OnInit {
       descripcion: new FormControl('', [
         Validators.required,
         Validators.maxLength(200)
-      ])
+      ]),
+      latitud: new FormControl(''),
+      longitud: new FormControl('')
     })
   }
 
+  formRuta() {
 
-  enviarFormulario() {
-    
-    
-
-
+    this.formularioRutaService.enviarRuta(this.formRegistro.value).subscribe((res) => {
+        this.router.navigate(['/eventos'])
+    })
   }
-
 }

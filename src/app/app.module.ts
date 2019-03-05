@@ -17,6 +17,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { FormularioRutaComponent } from './formulario-ruta/formulario-ruta.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { FormularioMiembroComponent } from './formulario-miembro/formulario-miembro.component';
+import { RutasComponent } from './rutas/rutas.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FormularioMiembroComponent } from './formulario-miembro/formulario-miem
     RegistroComponent,
     FormularioRutaComponent,
     PerfilComponent,
-    FormularioMiembroComponent
+    FormularioMiembroComponent,
+    RutasComponent
   ],
   imports: [
     BrowserModule,

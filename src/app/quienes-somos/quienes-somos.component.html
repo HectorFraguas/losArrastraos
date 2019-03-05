@@ -23,7 +23,7 @@
     <div class="col-xl-4 col-md-6 col-xs-12 text-center" *ngFor="let miem of miembros">
 
       <div class="borrar mb-3">
-        <button (click)="borrarSocio(miem.id)">Borrar</button>
+        <button type="submit" (click)="borrarSocio(miem.id)">Borrar</button>
       </div>
 
       <img class="foto" src="{{miem.foto}}">

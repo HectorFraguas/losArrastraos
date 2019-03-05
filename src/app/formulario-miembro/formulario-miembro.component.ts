@@ -40,6 +40,7 @@ export class FormularioMiembroComponent implements OnInit {
 
   enviarSocio(){
     this.formulariomiembroservice.agregarMiembro(this.formRegistro.value).subscribe((res) => {
+      console.log(this.formRegistro.value)
       this.router.navigate(['/quienes-somos'])
     })
   }

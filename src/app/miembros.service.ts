@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Miembro } from './models/miembro.models';
+import { Router } from '@angular/router';
 
 
 @Injectable({
@@ -13,7 +14,7 @@ export class MiembrosService {
   miembros: Miembro[]
 
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient,private router: Router) {
 
 
     this.url = 'http://localhost:3000/socios/'

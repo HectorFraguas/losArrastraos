@@ -1,6 +1,6 @@
 <h2 class="text-center mt-3 mb-5">AGREGA UNA RUTA</h2>
 
-<form novalidate [formGroup]="formRegistro" (ngSubmit)="enviarFormulario()">
+<form novalidate [formGroup]="formRegistro" (ngSubmit)="formRuta()">
   <div class="row">
 
     <div class="col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mb-3">
@@ -97,10 +97,10 @@
     </div>
 
     <div>
-      <input type="hidden">
+      <input type="hidden" formControlName="latitud">
     </div>
     <div>
-      <input type="hidden">
+      <input type="hidden" formControlName="longitud">
     </div>
 
   </div>

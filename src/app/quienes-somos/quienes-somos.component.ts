@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MiembrosService } from '../miembros.service';
 import { Miembro } from '../models/miembro.models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'quienes-somos',
@@ -11,23 +12,20 @@ export class QuienesSomosComponent implements OnInit {
 
   miembros: Miembro[]
 
-  constructor(private miembrosService: MiembrosService) {
-
+  constructor(private miembrosService: MiembrosService, private router: Router) {
     this.miembrosService.getMiembros().subscribe((res) => {
-
       this.miembros = res
-
-      console.log(this.miembros)
     })
-   }
+  }
 
   ngOnInit() {
   }
 
-  borrarSocio(miemId){
+  borrarSocio(miemId) {
     this.miembrosService.borrarSocio(miemId).subscribe((res) => {
+      this.miembrosService.getMiembros().subscribe((res) => {
+        this.miembros = res
+      })
     })
   }
- 
-
 }

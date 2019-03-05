@@ -1,0 +1,31 @@
+<div class="container">
+
+  <div class="row mt-4">
+
+    <div *ngFor="let arrRutas of rutas" class=" cuadro col-xl-12 col-ml-8 col-xs-6 mx-auto mb-3">
+
+      <div>
+
+        <h3 class="text-center">{{ arrRutas.titulo }}</h3>
+
+        <label>Provincia: </label> <span class="arr">{{ arrRutas.provincia }}</span> <br>
+
+        <label>Lugar de salida: </label> <span class="arr">{{ arrRutas.salida }}</span> <br>
+
+        <label>Lugar de llegada: </label> <span class="arr">{{ arrRutas.llegada }} </span> <br>
+
+        <label>Tipo de ruta: </label> <span class="arr">{{ arrRutas.tipo }}</span> <br>
+
+        <label>Descripcion de la ruta: </label> <span class="arr">{{ arrRutas.descripcion }}</span> <br>
+
+        <div class="google mx-auto mt-4"></div>
+
+        <button class="eliminar mb-2 mt-3" (click)="eliminarRuta(arrRutas.id)">Eliminar Ruta</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,4 +1,3 @@
-import { pipeDef } from '@angular/core/src/view';
 
 export class Usuarios {
 
