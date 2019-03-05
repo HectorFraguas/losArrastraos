@@ -29,6 +29,7 @@ export class LogInComponent implements OnInit {
 
   enviarLogin(){
     this.registrarservice.enviarLogin(this.formRegistro.value).subscribe((res) => {
+      console.log(res)
       this.router.navigate(['/home'])
     })
   }
