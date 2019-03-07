@@ -43,7 +43,7 @@ export class FormularioRutaComponent implements OnInit {
   }
 
   formRuta() {
-
+    console.log(this.formRegistro.value)
     this.formularioRutaService.enviarRuta(this.formRegistro.value).subscribe((res) => {
         this.router.navigate(['/eventos'])
     })

@@ -6,6 +6,18 @@
     height: 50px;
     font-size: 25px;
     cursor: pointer;
+    border-radius: .25rem; 
+}
+
+.filtrar{
+    background-color:#FFC312;
+    color:black;
+    border: 0px;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: .50rem; 
 }
 
 h3{
@@ -16,6 +28,7 @@ h3{
     border: 2px solid #FFC312;
     padding: 25px 25px;
     cursor:pointer;
+    border-radius: .25rem;
 }
 
 label {

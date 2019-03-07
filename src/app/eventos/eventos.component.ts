@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { EventosService } from '../eventos.service';
 import { Rutas } from '../models/rutas';
+import { FormGroup, FormControl } from '@angular/forms';
+import { RegistrarseService } from '../registrarse.service';
 
 @Component({
   selector: 'eventos',
@@ -9,9 +11,11 @@ import { Rutas } from '../models/rutas';
 })
 export class EventosComponent implements OnInit {
 
-  rutas: Rutas[]
+  rutas: any
 
-  constructor(private eventosService: EventosService) {
+  formRegistro: FormGroup
+
+  constructor(private eventosService: EventosService, public registrarseService: RegistrarseService) {
     
     this.eventosService.getRutas().subscribe((res) => {
       this.rutas = res
@@ -19,6 +23,16 @@ export class EventosComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.formRegistro = new FormGroup({
+      provincia: new FormControl(''),
+      tipoRuta: new FormControl('')
+    })
+  }
+
+  filtrarRutas(){
+    this.eventosService.filtrarRutas(this.formRegistro.value).subscribe((res) => {
+      this.rutas = res
+    })
   }
 
 

@@ -11,7 +11,6 @@ export class HeaderComponent implements OnInit {
   constructor(public registrarseService: RegistrarseService) { }
 
   ngOnInit() {
-    console.log(this.registrarseService.comprobarToken())
   }
 
 
