@@ -12,7 +12,12 @@ export class LogInComponent implements OnInit {
 
   formRegistro: FormGroup
 
+  mensajeError : string
+
   constructor(private registrarservice: RegistrarseService, private router: Router) {
+
+    this.mensajeError = ''
+
     this.formRegistro = new FormGroup({
       usuario: new FormControl('', [
         Validators.required,
@@ -29,13 +34,12 @@ export class LogInComponent implements OnInit {
 
   enviarLogin(){
     this.registrarservice.enviarLogin(this.formRegistro.value).subscribe((res) => {
-      this.router.navigate(['/home'])
-    
+      
       if(res['error']){
-        console.log('ERROR')
+        this.mensajeError = 'Usuario y/o contraseña incorrectos'
       }else{
-        console.log('ENTRA')
         localStorage.setItem('token', JSON.stringify(res));
+        this.router.navigate(['/home'])
       }
     })
   }

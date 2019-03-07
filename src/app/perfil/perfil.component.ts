@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuarios } from '../models/usuarios';
+import { Router } from '@angular/router';
+import { UsuarioService } from '../usuario.service';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-perfil',
@@ -8,16 +10,33 @@ import { Usuarios } from '../models/usuarios';
 })
 export class PerfilComponent implements OnInit {
 
-  arrUsuarios: Usuarios[]
+  arrUsuarios: any
+  token: any
 
-  constructor() { 
+  formRegistro: FormGroup
 
-    this.arrUsuarios = [
-      {id: 1, nombre: 'Hector', usuario: 'fraguas14', email: 'fraguas@gmail.com', imagen: '../../assets/miembros/hector.jpg'},
-    ]
-  }
+  constructor(private router: Router, private usuarioService: UsuarioService) { }
 
   ngOnInit() {
+    this.token = JSON.parse(localStorage.getItem('token'))
+
+    this.usuarioService.postUsuario(this.token).subscribe((res) => {
+      this.arrUsuarios = res
+
+      this.formRegistro = new FormGroup({
+        email: new FormControl(this.arrUsuarios.email)})
+    })
+    
   }
 
+  cerrarSesion() {
+    localStorage.clear()
+    this.router.navigate(['/home'])
+  }
+
+  actualizarUsuario(){
+    this.formRegistro.value.token = JSON.parse(localStorage.getItem('token'))
+    this.usuarioService.actualizarUsuario(this.formRegistro.value).subscribe((res) => {  
+    })
+  }
 }

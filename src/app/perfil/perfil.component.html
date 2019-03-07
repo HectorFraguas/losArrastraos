@@ -20,14 +20,17 @@
       <h5 class="mt-4">Usuario: </h5>
       <p>{{ arrUsu.usuario }}</p>
 
-      <h5 class="mt-4">Email: </h5><input type="text">
+      
+        <form novalidate [formGroup]="formRegistro" (ngSubmit)="actualizarUsuario()" >
+          <h5 class="mt-4">Email: </h5><input type="text" value="{{arrUsu.email}}" formControlName="email">
+          <button type="submit" class="mr-2">Guardar</button>
+        </form>
+     
 
       <div class="mt-4">
-        <button>Guardar</button>
+        <button (click)="cerrarSesion()">Cerrar sesión</button>
       </div>
 
     </div>
-
   </div>
-
 </div>

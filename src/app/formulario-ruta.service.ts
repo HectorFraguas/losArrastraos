@@ -9,7 +9,7 @@ export class FormularioRutaService {
   url: string
 
   constructor(private httpClient: HttpClient) {
-    this.url = 'http://localhost:3000/rutas/'
+    this.url = 'http://localhost:3000/rutas'
   }
 
   enviarRuta(value) {

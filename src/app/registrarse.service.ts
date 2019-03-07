@@ -16,11 +16,11 @@ export class RegistrarseService {
   }
 
   enviarRegistro(value){
+    console.log(value)
     return this.httpclient.post(`${this.url}new`, {nombre: value.nombre, usuario: value.usuario, email: value.email, clave: value.clave})
   }
 
   enviarLogin(value){
-    console.log(value)
     return this.httpclient.post(`${this.url}login`, {usuario: value.usuario, clave: value.clave})
   }
 
