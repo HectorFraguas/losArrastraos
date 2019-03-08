@@ -82,7 +82,7 @@
 
   <div class="row mt-4">
 
-    <div *ngFor="let arrRutas of rutas" class=" cuadro col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mt-5 mb-3">
+    <div *ngFor="let arrRutas of rutas" [routerLink]="['/ruta', arrRutas.id]" class=" cuadro col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mt-5 mb-3">
 
       <h3 class="text-center">{{ arrRutas.titulo }}</h3>
 

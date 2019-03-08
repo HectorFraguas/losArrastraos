@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'registrarse', component: RegistroComponent },
   { path: 'formulario-ruta', component: FormularioRutaComponent },
   { path: 'perfil', component: PerfilComponent },
-  { path: 'ruta', component: RutasComponent },  
+  { path: 'ruta/:id', component: RutasComponent },  
   { path: 'formulario-miembro', component: FormularioMiembroComponent },
 
   { path: '**', redirectTo: 'home' }

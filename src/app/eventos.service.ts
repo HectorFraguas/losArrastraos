@@ -23,7 +23,10 @@ export class EventosService {
   }
 
   filtrarRutas(value){
-    console.log(value)
     return this.httpClient.post(`${this.url}/filtro`, {provincia: value.provincia, tipoRuta: value.tipoRuta})
+  }
+
+  getRuta(id){
+    return this.httpClient.get<any[]>(`${this.url}/${id}`)
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EventosService } from '../eventos.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-rutas',
@@ -9,29 +9,38 @@ import { Router } from '@angular/router';
 })
 export class RutasComponent implements OnInit {
 
-  rutas: any[]
+  ruta: any
+  tokenUsuario: any
 
-  constructor(private eventosService: EventosService, private router: Router) {
-    this.rutas = [
-      {id: 0,
-      titulo: 'Ruta uno',
-      provincia: 'Madrid',
-      salida: 'Calle Los Prados',
-      llegada: 'Calle Los almendros',
-      descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, adipisci incidunt. Iure repellat quae voluptatum voluptas mollitia exercitationem sint omnis! Id ab magni repellendus expedita sit ut laborum eius laudantium.',
-      tipo: 'asfalto',
-      fotos: '../../assets/motos/moto2.jpg'}
-    ]
+  constructor(private eventosService: EventosService, private router: Router, private activatedRoute: ActivatedRoute) {
+
+    this.activatedRoute.params.subscribe( params => { 
+      this.eventosService.getRuta(params.id).subscribe((res) => {
+        console.log(res)
+        if(res.length == 0){
+          this.router.navigate(['/eventos'])
+        }
+        else{
+          this.tokenUsuario = JSON.parse(localStorage.getItem('token'))
+          this.ruta = res
+        }
+      })
+    })
    }
 
   ngOnInit() {
+    
   }
 
-  eliminarRuta(id){
-    
-    this.eventosService.deletedRuta(id).subscribe(() => {
-      this.router.navigate(['/eventos'])
+  getRuta(id) {
+    this.eventosService.getRuta(id).subscribe((res) => {
+      this.ruta = res
     })
   }
 
+  eliminarRuta(id){
+    this.eventosService.deletedRuta(id).subscribe((res) => {
+      this.router.navigate(['/eventos'])
+    })
+  }
 }

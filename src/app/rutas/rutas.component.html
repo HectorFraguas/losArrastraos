@@ -2,30 +2,32 @@
 
   <div class="row mt-4">
 
-    <div *ngFor="let arrRutas of rutas" class=" cuadro col-xl-12 col-ml-8 col-xs-6 mx-auto mb-3">
+    <div  class=" cuadro col-xl-12 col-ml-8 col-xs-6 mx-auto mb-3">
 
       <div>
 
-        <h3 class="text-center">{{ arrRutas.titulo }}</h3>
+        <h3 class="text-center">{{ ruta?.titulo }}</h3>
 
-        <label>Provincia: </label> <span class="arr">{{ arrRutas.provincia }}</span> <br>
+        <label>Provincia: </label> <span class="arr">{{ ruta?.provincia }}</span> <br>
 
-        <label>Lugar de salida: </label> <span class="arr">{{ arrRutas.salida }}</span> <br>
+        <label>Lugar de salida: </label> <span class="arr">{{ ruta?.salida }}</span> <br>
 
-        <label>Lugar de llegada: </label> <span class="arr">{{ arrRutas.llegada }} </span> <br>
+        <label>Lugar de llegada: </label> <span class="arr">{{ ruta?.llegada }} </span> <br>
 
-        <label>Tipo de ruta: </label> <span class="arr">{{ arrRutas.tipo }}</span> <br>
+        <label>Tipo de ruta: </label> <span class="arr">{{ ruta?.tipoRuta }}</span> <br>
 
-        <label>Descripcion de la ruta: </label> <span class="arr">{{ arrRutas.descripcion }}</span> <br>
+        <label>Descripcion de la ruta: </label> <span class="arr">{{ ruta?.descripcion }}</span> <br>
 
-        <div class="google mx-auto mt-4"></div>
+        <div class="google mx-auto mt-4 mb-3"></div>
 
-        <button class="eliminar mb-2 mt-3" (click)="eliminarRuta(arrRutas.id)">Eliminar Ruta</button>
+        <button class="eliminar mb-2 mt-3" (click)="eliminarRuta(ruta?.id)" *ngIf="ruta?.token == tokenUsuario">Eliminar Ruta</button>
 
       </div>
+      
 
     </div>
 
   </div>
 
 </div>
+
