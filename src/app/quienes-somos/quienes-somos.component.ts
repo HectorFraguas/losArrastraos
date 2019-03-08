@@ -10,10 +10,14 @@ import { Router } from '@angular/router';
 })
 export class QuienesSomosComponent implements OnInit {
 
-  miembros: Miembro[]
+  miembros: any
+  tokenLocal: any
+  tokenAdmin: any
 
   constructor(private miembrosService: MiembrosService, private router: Router) {
     this.miembrosService.getMiembros().subscribe((res) => {
+      this.tokenAdmin = res[0].token
+      this.tokenLocal = JSON.parse(localStorage.getItem('token'))
       this.miembros = res
     })
   }

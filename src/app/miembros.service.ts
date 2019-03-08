@@ -22,7 +22,7 @@ export class MiembrosService {
 
    getMiembros(){
 
-   return this.httpClient.get<Miembro[]>(this.url)
+   return this.httpClient.get<any[]>(this.url)
    }
 
    borrarSocio(miemId){

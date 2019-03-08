@@ -23,12 +23,12 @@
     <div class="col-xl-4 col-md-6 col-xs-12 text-center" *ngFor="let miem of miembros">
 
       <div class="borrar mb-3">
-        <button type="submit" (click)="borrarSocio(miem.id)">Borrar</button>
+        <button type="submit" (click)="borrarSocio(miem.id)" *ngIf="tokenAdmin == tokenLocal">Borrar</button>
       </div>
 
       <img class="foto" src="{{miem.foto}}">
 
-      <h4 class="text-center mt-3">{{miem.nombre}}</h4>
+      <h4 class="text-center mt-3">{{miem.nombrePersona}}</h4>
       <h5 class="text-center">{{miem.cargo}}</h5>
       <h5 class="moto text-center mb-5">{{miem.moto}}</h5>
 
@@ -38,8 +38,10 @@
 
   <div class="row">
     <div class="mx-auto mt-5 mb-5">
-    <button [routerLink]="['/formulario-miembro']">Añadir socio</button>
+    <button [routerLink]="['/formulario-miembro']" *ngIf="tokenAdmin == tokenLocal">Añadir socio</button>
   </div>
+
+    
   </div>
 
 </div>

@@ -16,7 +16,6 @@ export class RutasComponent implements OnInit {
 
     this.activatedRoute.params.subscribe( params => { 
       this.eventosService.getRuta(params.id).subscribe((res) => {
-        console.log(res)
         if(res.length == 0){
           this.router.navigate(['/eventos'])
         }
