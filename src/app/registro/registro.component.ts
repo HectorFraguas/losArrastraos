@@ -12,7 +12,11 @@ export class RegistroComponent implements OnInit {
 
   formRegistro: FormGroup
 
-  constructor(private registrarseservice: RegistrarseService, private router: Router) { }
+  mensajeError:string
+
+  constructor(private registrarseservice: RegistrarseService, private router: Router) {
+    this.mensajeError = ''
+   }
 
   ngOnInit() {
     this.formRegistro = new FormGroup({
@@ -34,7 +38,11 @@ export class RegistroComponent implements OnInit {
 
   enviarRegistro(){
     this.registrarseservice.enviarRegistro(this.formRegistro.value).subscribe((res) =>{
-      this.router.navigate(['/login'])
+      if(res['error']){
+        this.mensajeError = 'Usuario y/o contraseña ya estan registrados'
+      }else{
+        this.router.navigate(['/login'])
+      } 
     })
   }
 }
