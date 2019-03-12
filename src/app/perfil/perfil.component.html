@@ -8,7 +8,9 @@
         <img [src]="[arrUsu.imagen]" alt="">
       </div>
 
-      <input class="foto mr-2 mt-3 mb-3" type="file">
+      <input class="foto mr-2 mt-3 mb-3" type="file" (change)="onChangeImage($event)">
+      <label>Carga de imagen: {{ uploadPercent | async }}%</label>
+      <button class="foto mr-2 mt-3 mb-3 ml-3" (click)="enviarImagen()">Cambiar imagen</button>
 
     </div>
 

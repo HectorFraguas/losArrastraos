@@ -26,4 +26,8 @@ export class UsuarioService {
     console.log(value)
     return this.httpClient.post(`${this.url}/update`, {token: value.token, email: value.email, imagen: value.imagen})
   }
+
+  enviarImagen(value){
+    return this.httpClient.post(`${this.url}/update/updatefotoperfil`, {imagen: value.imagen, token: value.token})
+  }
 }

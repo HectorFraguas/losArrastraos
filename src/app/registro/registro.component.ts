@@ -38,6 +38,7 @@ export class RegistroComponent implements OnInit {
 
   enviarRegistro(){
     this.registrarseservice.enviarRegistro(this.formRegistro.value).subscribe((res) =>{
+      console.log(res)
       if(res['error']){
         this.mensajeError = 'Usuario y/o contraseña ya estan registrados'
       }else{
