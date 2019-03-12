@@ -16,7 +16,6 @@ export class FormularioMiembrosService {
    }
 
    agregarMiembro(value){
-
     return this.httpclient.post(`${this.url}/new`, {nombre: value.nombre, moto: value.moto, cargo: value.cargo, foto: value.foto})
    }
 }

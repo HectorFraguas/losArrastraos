@@ -24,6 +24,6 @@ export class UsuarioService {
 
   actualizarUsuario(value){
     console.log(value)
-    return this.httpClient.post(`${this.url}/update`, {token: value.token, email: value.email})
+    return this.httpClient.post(`${this.url}/update`, {token: value.token, email: value.email, imagen: value.imagen})
   }
 }

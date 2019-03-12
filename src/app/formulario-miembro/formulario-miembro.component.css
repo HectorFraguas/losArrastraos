@@ -20,3 +20,8 @@ input{
     border-radius: .25rem;
     width: 400px;
 }
+
+.inputFoto{
+    color:white;
+    border: 1px solid #FFC312;
+}

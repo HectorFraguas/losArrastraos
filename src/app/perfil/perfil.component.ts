@@ -35,8 +35,19 @@ export class PerfilComponent implements OnInit {
   }
 
   actualizarUsuario(){
-    this.formRegistro.value.token = JSON.parse(localStorage.getItem('token'))
-    this.usuarioService.actualizarUsuario(this.formRegistro.value).subscribe((res) => {  
-    })
+    let valuesUpdate = {
+      token: this.token
+    }
+    if(this.formRegistro.controls.email.dirty){
+      valuesUpdate['email'] = this.formRegistro.value.email
+    }
+    let valuesUpdateSize = Object.keys(valuesUpdate).length
+    if(valuesUpdateSize > 1){
+      this.formRegistro.value.token = JSON.parse(localStorage.getItem('token'))
+      this.usuarioService.actualizarUsuario(valuesUpdate).subscribe((res) => {  
+      })
+    }else{
+      alert('Para actualizar hay que modificar el email')
+    }
   }
 }

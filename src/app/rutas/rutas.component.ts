@@ -20,6 +20,7 @@ export class RutasComponent implements OnInit {
           this.router.navigate(['/eventos'])
         }
         else{
+          let tokenAdmin = res['token']
           this.tokenUsuario = JSON.parse(localStorage.getItem('token'))
           this.ruta = res
         }

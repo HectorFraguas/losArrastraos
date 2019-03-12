@@ -8,8 +8,8 @@
 
 img{
     border-radius: 50%;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
 }
 
 .foto{
@@ -37,5 +37,11 @@ button{
 input{
     width: 300px;
     color:black;
+}
+
+.inputFoto{
+    color:white;
+    border: 1px solid #FFC312;
+    border-radius: .25rem;
 }
 

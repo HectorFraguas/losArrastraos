@@ -8,14 +8,14 @@ import { Rutas } from './models/rutas';
 export class EventosService {
 
   url: string
-  rutas: Rutas[]
+  rutas: any
 
   constructor(private httpClient: HttpClient) { 
     this.url = 'http://localhost:3000/rutas'
   }
 
   getRutas(){
-    return this.httpClient.get<Rutas[]>(`${this.url}/all`)
+    return this.httpClient.get<any[]>(`${this.url}/all`)
   }
 
   deletedRuta(id){

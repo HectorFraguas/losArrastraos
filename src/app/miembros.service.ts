@@ -26,7 +26,7 @@ export class MiembrosService {
    }
 
    borrarSocio(miemId){
-
+    
     return this.httpClient.get( `${this.url}/delete/${miemId}`)
    }
 }
