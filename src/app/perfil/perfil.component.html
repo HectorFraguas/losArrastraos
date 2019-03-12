@@ -9,8 +9,10 @@
       </div>
 
       <input class="foto mr-2 mt-3 mb-3" type="file" (change)="onChangeImage($event)">
+      <div>
       <label>Carga de imagen: {{ uploadPercent | async }}%</label>
-      <button class="foto mr-2 mt-3 mb-3 ml-3" (click)="enviarImagen()">Cambiar imagen</button>
+    </div>
+      <button class="foto mr-2 mt-3 mb-3 ml-3" (click)="enviarImagen()"  >Cambiar imagen</button>
 
     </div>
 

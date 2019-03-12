@@ -22,11 +22,11 @@ export class MiembrosService {
 
    getMiembros(){
 
-   return this.httpClient.get<any[]>(this.url)
+   return this.httpClient.get(this.url)
    }
 
    borrarSocio(miemId){
     
-    return this.httpClient.get( `${this.url}/delete/${miemId}`)
+    return this.httpClient.get(`${this.url}/delete/${miemId}`)
    }
 }

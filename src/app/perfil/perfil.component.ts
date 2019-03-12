@@ -47,14 +47,13 @@ export class PerfilComponent implements OnInit {
     const filePath = `usuarios/${nombreImagen}.jpg`;
     const fileRef = this.storage.ref(filePath);
     const task = this.storage.upload(filePath, image);
-    console.log(image)
 
     this.uploadPercent = task.percentageChanges();
     task.snapshotChanges().pipe(
       finalize(() => {
         this.downloadURL = fileRef.getDownloadURL()
         this.downloadURL.subscribe(url => {
-          
+          console.log(this.uploadPercent)
           this.urlImagen = url
         })
       })

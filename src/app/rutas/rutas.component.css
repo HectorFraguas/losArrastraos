@@ -22,10 +22,45 @@ span{
     width: 130px;
     height: 30px;
     cursor:pointer;
+    border-radius: .25rem;
 }
 
 .google{
     width: 500px;
     height: 300px;
     background-color: blue;
+}
+
+.cajaComentarios{
+    border: 2px solid #FFC312
+}
+
+.nombreComen{
+    color:#FFC312;
+}
+
+.comentario{
+    color: white;
+}
+
+.cajaIntroducirComen{
+    border: 2px solid #FFC312;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.tituloComen{
+    color:#FFC312;
+    text-align: center;
+}
+
+.botonComen{
+    background-color:#FFC312;
+    color:black;
+    border: 0px;
+    cursor:pointer;
+    height: 35px;
+    border-radius: .25rem;
 }

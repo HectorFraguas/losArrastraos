@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { EventosService } from '../eventos.service';
-import { Rutas } from '../models/rutas';
 import { FormGroup, FormControl } from '@angular/forms';
 import { RegistrarseService } from '../registrarse.service';
 

@@ -11,6 +11,7 @@ export class RutasComponent implements OnInit {
 
   ruta: any
   tokenUsuario: any
+  
 
   constructor(private eventosService: EventosService, private router: Router, private activatedRoute: ActivatedRoute) {
 
@@ -22,6 +23,7 @@ export class RutasComponent implements OnInit {
         else{
           let tokenAdmin = res['token']
           this.tokenUsuario = JSON.parse(localStorage.getItem('token'))
+          console.log(res)
           this.ruta = res
         }
       })
@@ -42,5 +44,13 @@ export class RutasComponent implements OnInit {
     this.eventosService.deletedRuta(id).subscribe((res) => {
       this.router.navigate(['/eventos'])
     })
+  }
+
+  enviarComentario(value){
+    let token = JSON.parse(localStorage.getItem('token'))
+    let comentario = value
+
+    
+  
   }
 }

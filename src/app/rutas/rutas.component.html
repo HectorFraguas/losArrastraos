@@ -2,7 +2,7 @@
 
   <div class="row mt-4">
 
-    <div  class=" cuadro col-xl-12 col-ml-8 col-xs-6 mx-auto mb-3">
+    <div class=" cuadro col-xl-12 col-ml-8 col-xs-6 mx-auto mb-3">
 
       <div>
 
@@ -20,10 +20,25 @@
 
         <div class="google mx-auto mt-4 mb-3"></div>
 
-        <button class="eliminar mb-2 mt-3" (click)="eliminarRuta(ruta?.id)" *ngIf="ruta?.token == tokenUsuario">Eliminar Ruta</button>
+        <button class="eliminar mb-2 mt-3" (click)="eliminarRuta(ruta?.id)" *ngIf="ruta?.token == tokenUsuario">Eliminar
+          Ruta</button>
 
       </div>
-      
+
+
+    </div>
+
+  </div>
+
+
+  <div class="row mt-4">
+
+    <h3>COMENTARIOS</h3>
+
+    <div class=" cajaComentarios col-xl-12 col-ml-8 col-xs-6 mx-auto mb-3">
+
+      <div class="nombreComen mt-2"></div>
+      <div class="comentario mb-2"></div>
 
     </div>
 
@@ -31,3 +46,12 @@
 
 </div>
 
+<div class="cajaIntroducirComen">
+
+  <h5 class="tituloComen mt-2 mb-3">AGREGA TU COMENTARIO</h5>
+
+  <textarea name="" id="" cols="30" rows="10" #mensaje></textarea>
+
+  <button class="botonComen mt-4" (click)="enviarComentario(mensaje.value)">Enviar Comentario</button>
+
+</div>
