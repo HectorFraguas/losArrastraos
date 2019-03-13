@@ -29,4 +29,9 @@ export class EventosService {
   getRuta(id){
     return this.httpClient.get<any[]>(`${this.url}/${id}`)
   }
+
+  enviarComentario(token, comentario, idRuta) {
+    console.log(token, comentario, idRuta, 'service')
+    return this.httpClient.post(`${this.url}/agregarcomentario`, {comentario: comentario, fk_ruta: idRuta, token:token})
+  }
 }

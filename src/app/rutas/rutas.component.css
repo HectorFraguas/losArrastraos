@@ -64,3 +64,12 @@ span{
     height: 35px;
     border-radius: .25rem;
 }
+
+.botonborrarcoment{
+    background-color:#FFC312;
+    color:black;
+    border: 0px;
+    cursor:pointer;
+    height: 22px;
+    border-radius: .25rem;
+}
