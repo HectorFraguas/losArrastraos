@@ -30,7 +30,7 @@ export class PerfilComponent implements OnInit {
     this.usuarioService.postUsuario(this.token).subscribe((res) => {
       this.arrUsuarios = res
 
-      if(res[0].imagen == null){
+      if (res[0].imagen == null) {
         res[0].imagen = 'https://firebasestorage.googleapis.com/v0/b/losarrastraos-f55f6.appspot.com/o/usuarios%2Fusuario.jpg?alt=media&token=fa1aa5a7-3823-490c-8b59-c7e746bc3ab2'
       }
 
@@ -61,39 +61,47 @@ export class PerfilComponent implements OnInit {
       .subscribe()
   }
 
-  enviarImagen(){
+  enviarImagen() {
     let imagenToken = {
-      imagen : this.urlImagen,
-      token : JSON.parse(localStorage.getItem('token'))
+      imagen: this.urlImagen,
+      token: JSON.parse(localStorage.getItem('token'))
     }
     console.log(imagenToken)
     this.usuarioService.enviarImagen(imagenToken).subscribe((res) => {
       this.usuarioService.postUsuario(this.token).subscribe((res) => {
         this.arrUsuarios = res
+
+        if (res[0].imagen == null) {
+          res[0].imagen = 'https://firebasestorage.googleapis.com/v0/b/losarrastraos-f55f6.appspot.com/o/usuarios%2Fusuario.jpg?alt=media&token=fa1aa5a7-3823-490c-8b59-c7e746bc3ab2'
+        }
+
+        this.formRegistro = new FormGroup({
+          email: new FormControl(this.arrUsuarios.email)
+        })
       })
     })
   }
 
 
-cerrarSesion() {
-  localStorage.clear()
-  this.router.navigate(['/home'])
-}
+  cerrarSesion() {
+    localStorage.clear()
+    this.router.navigate(['/home'])
+  }
 
-actualizarUsuario(){
-  let valuesUpdate = {
-    token: this.token
+  actualizarUsuario() {
+    let valuesUpdate = {
+      token: this.token
+    }
+    if (this.formRegistro.controls.email.dirty) {
+      valuesUpdate['email'] = this.formRegistro.value.email
+    }
+    let valuesUpdateSize = Object.keys(valuesUpdate).length
+    if (valuesUpdateSize > 1) {
+      this.formRegistro.value.token = JSON.parse(localStorage.getItem('token'))
+      this.usuarioService.actualizarUsuario(valuesUpdate).subscribe((res) => {
+      })
+    } else {
+      alert('Para actualizar hay que modificar el email')
+    }
   }
-  if (this.formRegistro.controls.email.dirty) {
-    valuesUpdate['email'] = this.formRegistro.value.email
-  }
-  let valuesUpdateSize = Object.keys(valuesUpdate).length
-  if (valuesUpdateSize > 1) {
-    this.formRegistro.value.token = JSON.parse(localStorage.getItem('token'))
-    this.usuarioService.actualizarUsuario(valuesUpdate).subscribe((res) => {
-    })
-  } else {
-    alert('Para actualizar hay que modificar el email')
-  }
-}
 }

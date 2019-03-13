@@ -33,14 +33,14 @@
 
   <div class="row mt-4">
 
-    <h3>COMENTARIOS</h3>
+    <h3 *ngIf="!ruta?.comentarios.length == 0">COMENTARIOS</h3>
 
     <div class=" cajaComentarios col-xl-12 col-ml-8 col-xs-6 mx-auto mb-3" *ngFor="let coment of ruta?.comentarios">
 
       <div class="nombreComen mt-2">{{ coment?.usuarioComentario }}</div>
       <div class="comentario mb-2">{{ coment?.comentario }}</div>
       <div class="text-right">
-        <button class="botonborrarcoment mb-2 mt-2" *ngIf="coment?.tokenUsuario == tokenUsuario">Borrar comentario</button>
+        <button class="botonborrarcoment mb-2 mt-2" *ngIf="coment?.tokenUsuario == tokenUsuario" (click)="borrarComentario(coment?.idComentario)">Borrar comentario</button>
       </div>
 
     </div>
@@ -53,7 +53,7 @@
 
   <h5 class="tituloComen mt-2 mb-3">AGREGA TU COMENTARIO</h5>
 
-  <textarea name="" id="" cols="30" rows="10" #mensaje></textarea>
+  <textarea cols="30" rows="10" #mensaje></textarea>
 
   <button class="botonComen mt-4" (click)="enviarComentario(mensaje.value)">Enviar Comentario</button>
 

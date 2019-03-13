@@ -4,6 +4,7 @@ h3{
 
 .cuadro{
     border: 2px solid #FFC312;
+    border-radius: .25rem;;
 }
 
 label {
@@ -32,7 +33,8 @@ span{
 }
 
 .cajaComentarios{
-    border: 2px solid #FFC312
+    border: 2px solid #FFC312;
+    border-radius: .25rem;
 }
 
 .nombreComen{
@@ -49,6 +51,7 @@ span{
     width: 400px;
     height: 400px;
     margin: 0 auto;
+    border-radius: .25rem;
 }
 
 .tituloComen{
@@ -71,5 +74,9 @@ span{
     border: 0px;
     cursor:pointer;
     height: 22px;
+    border-radius: .25rem;
+}
+
+textarea{
     border-radius: .25rem;
 }

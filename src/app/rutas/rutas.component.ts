@@ -11,21 +11,20 @@ export class RutasComponent implements OnInit {
 
   ruta: any
   tokenUsuario: any
-  
+
 
   constructor(private eventosService: EventosService, private router: Router, private activatedRoute: ActivatedRoute) {
 
-    
-   }
+
+  }
 
   ngOnInit() {
-    this.activatedRoute.params.subscribe( params => { 
-      console.log("PARAMETROS!!!", params)
+    this.activatedRoute.params.subscribe(params => {
       this.eventosService.getRuta(params.id).subscribe((res) => {
-        if(res.length == 0){
+        if (res.length == 0) {
           this.router.navigate(['/eventos'])
         }
-        else{
+        else {
           let tokenAdmin = res['token']
           this.tokenUsuario = JSON.parse(localStorage.getItem('token'))
           console.log(res)
@@ -37,33 +36,48 @@ export class RutasComponent implements OnInit {
 
   getRuta(id) {
     this.eventosService.getRuta(id).subscribe((res) => {
+
       this.ruta = res
     })
   }
 
-  eliminarRuta(id){
+  eliminarRuta(id) {
     this.eventosService.deletedRuta(id).subscribe((res) => {
       this.router.navigate(['/eventos'])
     })
   }
 
-  enviarComentario(value){
+  enviarComentario(value) {
     let token = JSON.parse(localStorage.getItem('token'))
     let comentario = value
     let idRuta = this.ruta.idRuta
-    console.log(this.ruta)
-    console.log(token, comentario, idRuta)
 
     this.eventosService.enviarComentario(token, comentario, idRuta).subscribe((res) => {
-      this.activatedRoute.params.subscribe( params => { 
+      this.activatedRoute.params.subscribe(params => {
         this.eventosService.getRuta(params.id).subscribe((res) => {
-          if(res.length == 0){
+          if (res.length == 0) {
             this.router.navigate(['/eventos'])
           }
-          else{
+          else {
             let tokenAdmin = res['token']
             this.tokenUsuario = JSON.parse(localStorage.getItem('token'))
-            console.log(res)
+            this.ruta = res
+          }
+        })
+      })
+    })
+  }
+
+  borrarComentario(id) {
+    this.eventosService.borrarComentario(id).subscribe((res) => {
+      this.activatedRoute.params.subscribe(params => {
+        this.eventosService.getRuta(params.id).subscribe((res) => {
+          if (res.length == 0) {
+            this.router.navigate(['/eventos'])
+          }
+          else {
+            let tokenAdmin = res['token']
+            this.tokenUsuario = JSON.parse(localStorage.getItem('token'))
             this.ruta = res
           }
         })
