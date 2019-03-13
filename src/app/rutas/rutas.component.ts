@@ -27,7 +27,7 @@ export class RutasComponent implements OnInit {
         else {
           let tokenAdmin = res['token']
           this.tokenUsuario = JSON.parse(localStorage.getItem('token'))
-          console.log(res)
+          // console.log(res)
           this.ruta = res
         }
       })
@@ -51,6 +51,7 @@ export class RutasComponent implements OnInit {
     let token = JSON.parse(localStorage.getItem('token'))
     let comentario = value
     let idRuta = this.ruta.idRuta
+    
 
     this.eventosService.enviarComentario(token, comentario, idRuta).subscribe((res) => {
       this.activatedRoute.params.subscribe(params => {

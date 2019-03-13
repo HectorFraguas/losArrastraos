@@ -25,7 +25,6 @@
 
       </div>
 
-
     </div>
 
   </div>
@@ -53,7 +52,7 @@
 
   <h5 class="tituloComen mt-2 mb-3">AGREGA TU COMENTARIO</h5>
 
-  <textarea cols="30" rows="10" #mensaje></textarea>
+  <textarea cols="30" rows="10" maxlength="400" #mensaje></textarea>
 
   <button class="botonComen mt-4" (click)="enviarComentario(mensaje.value)">Enviar Comentario</button>
 
