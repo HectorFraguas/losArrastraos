@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventosService } from '../eventos.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { RegistrarseService } from '../registrarse.service';
 
 @Component({
   selector: 'app-rutas',
@@ -13,7 +14,7 @@ export class RutasComponent implements OnInit {
   tokenUsuario: any
 
 
-  constructor(private eventosService: EventosService, private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private eventosService: EventosService, private router: Router, private activatedRoute: ActivatedRoute, private registrarseService: RegistrarseService) {
 
 
   }
@@ -51,8 +52,7 @@ export class RutasComponent implements OnInit {
     let token = JSON.parse(localStorage.getItem('token'))
     let comentario = value
     let idRuta = this.ruta.idRuta
-    
-
+ 
     this.eventosService.enviarComentario(token, comentario, idRuta).subscribe((res) => {
       this.activatedRoute.params.subscribe(params => {
         this.eventosService.getRuta(params.id).subscribe((res) => {

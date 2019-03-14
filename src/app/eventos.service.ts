@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ValueConverter } from '@angular/compiler/src/render3/view/template';
-
 
 @Injectable({
   providedIn: 'root'
@@ -32,7 +30,6 @@ export class EventosService {
   }
 
   enviarComentario(token, comentario, idRuta) {
-    console.log(token, comentario, idRuta, 'service')
     return this.httpClient.post(`${this.url}/agregarcomentario`, { comentario: comentario, fk_ruta: idRuta, token: token })
   }
 
