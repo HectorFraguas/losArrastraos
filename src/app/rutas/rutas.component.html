@@ -18,9 +18,20 @@
 
         <label>Descripcion de la ruta: </label> <span class="arr">{{ ruta?.descripcion }}</span> <br>
 
-        <div class="google mx-auto mt-4 mb-3"></div>
+        <label>Duración de la ruta </label> <span class="arr">{{ duracion }}</span> <br>
 
-        <button class="eliminar mb-2 mt-3" (click)="eliminarRuta(ruta?.id)" *ngIf="ruta?.token == tokenUsuario">Eliminar
+        <label>Distancia de la ruta </label> <span class="arr">{{ distancia }}</span> <br>
+
+
+        <!-- div de google maps -->
+        <div class="row justify-content-center map">
+          <div class="maps col-8 mt-3 mb-3" #googleMap style='width:600px; height:500px'>
+          </div>
+        </div>
+        <!-- hasta aqui mapa de google -->
+
+
+        <button class="eliminar mb-2 mt-3" (click)="eliminarRuta(ruta?.idRuta)" *ngIf="ruta?.token == tokenUsuario">Eliminar
           Ruta</button>
 
       </div>

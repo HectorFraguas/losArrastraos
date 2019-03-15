@@ -34,6 +34,7 @@ export class EventosService {
   }
 
   borrarComentario(id) {
+    console.log(id)
     return this.httpClient.post(`${this.url}/borrarcomentario`, { id: id })
   }
 }

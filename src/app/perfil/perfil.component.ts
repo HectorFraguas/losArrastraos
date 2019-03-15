@@ -99,6 +99,7 @@ export class PerfilComponent implements OnInit {
     if (valuesUpdateSize > 1) {
       this.formRegistro.value.token = JSON.parse(localStorage.getItem('token'))
       this.usuarioService.actualizarUsuario(valuesUpdate).subscribe((res) => {
+        alert('Email actualizado')
       })
     } else {
       alert('Para actualizar hay que modificar el email')

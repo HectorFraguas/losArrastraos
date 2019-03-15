@@ -12,8 +12,8 @@ export class FormularioRutaService {
     this.url = 'http://localhost:3000/rutas'
   }
 
-  enviarRuta(value) {
-    
-    return this.httpClient.post(`${this.url}/new`, { titulo: value.titulo, provincia: value.provincia, tipoRuta: value.tipoRuta, salida: value.salida, llegada: value.llegada, descripcion: value.descripcion, latitud: value.latitud, longitud: value.longitud, token: JSON.parse(localStorage.getItem('token')) })
+  enviarRuta(value, latSalida, latLlegada, longSalida, longLlegada) {
+    // console.log(value)
+    return this.httpClient.post(`${this.url}/new`, { titulo: value.titulo, provincia: value.provincia, tipoRuta: value.tipoRuta, salida: value.salida, llegada: value.llegada, descripcion: value.descripcion, latitud: latSalida, longitud: longSalida, latllegada:latLlegada, longllegada:longLlegada, token: JSON.parse(localStorage.getItem('token')) })
   }
 }

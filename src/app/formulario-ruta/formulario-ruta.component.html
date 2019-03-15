@@ -4,12 +4,12 @@
   <div class="row">
 
     <div class="col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mb-3">
-      <label>Titulo de la ruta</label><br>
+      <label>* Titulo de la ruta</label><br>
       <input type="text" formControlName="titulo">
     </div>
 
     <div class="col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mb-3">
-      <label>Provincia</label><br>
+      <label>* Provincia</label><br>
       <select formControlName="provincia" placeholder="Provincia">
         <option value="" disabled selected></option>
         <option value='alava'>Álava</option>
@@ -68,7 +68,7 @@
     </div>
 
     <div class="col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mb-3">
-      <label>Tipo de ruta</label><br>
+      <label>* Tipo de ruta</label><br>
       <select formControlName="tipoRuta" placeholder="Tipo de ruta">
         <option value="" disabled selected></option>
         <option value="asfalto">Asfalto</option>
@@ -78,30 +78,27 @@
     </div>
 
     <div class="col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mb-3">
-      <label>Lugar de salida</label><br>
-      <input type="text" formControlName="salida">
+      <label>* Lugar de salida</label><br>
+      <input type="text" id="inputPlaceSalida" formControlName="salida">
     </div>
 
     <div class="col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mb-3">
       <label>Lugar de llegada</label><br>
-      <input type="text" formControlName="llegada">
+      <input type="text" id="inputPlaceLlegada" formControlName="llegada">
     </div>
 
     <div class="col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mb-3">
-      <label>Descripcion de la ruta</label><br>
-      <textarea formControlName="descripcion"> </textarea>
+      <label>* Descripcion de la ruta</label><br>
+      <textarea formControlName="descripcion"></textarea>
     </div>
 
     <div class="col-xl-12 col-ml-8 col-xs-6 text-center mt-3">
       <button type="submit" class="">Enviar ruta</button>
     </div>
 
-    <div>
-      <input type="hidden" formControlName="latitud">
-    </div>
-    <div>
-      <input type="hidden" formControlName="longitud">
-    </div>
+    
 
   </div>
 </form>
+
+<p class="camposComentarios">Los campos con * son obligatorios</p>
