@@ -39,3 +39,9 @@ span{
     color:white;
     margin-left: 8px;
 }
+
+.imagen{
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+}
