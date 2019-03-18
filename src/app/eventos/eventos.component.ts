@@ -30,10 +30,7 @@ export class EventosComponent implements OnInit {
 
   filtrarRutas(){
     this.eventosService.filtrarRutas(this.formRegistro.value).subscribe((res) => {
-<<<<<<< HEAD
       // console.log(res)
-=======
->>>>>>> parent of 2b358d6... pintado usuarios y foto de usuario en las rutas
       this.rutas = res
     })
   }
