@@ -17,6 +17,7 @@ export class EventosComponent implements OnInit {
   constructor(private eventosService: EventosService, public registrarseService: RegistrarseService) {
     
     this.eventosService.getRutas().subscribe((res) => {
+      console.log(res)
       this.rutas = res
     })
   }
@@ -30,7 +31,7 @@ export class EventosComponent implements OnInit {
 
   filtrarRutas(){
     this.eventosService.filtrarRutas(this.formRegistro.value).subscribe((res) => {
-      // console.log(res)
+      console.log(res)
       this.rutas = res
     })
   }
