@@ -84,22 +84,11 @@
 
     <div *ngFor="let arrRutas of rutas" [routerLink]="['/ruta', arrRutas.id]" class=" cuadro col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mt-4 mb-3">
 
-      <div class="row">
-        <div class="col-6">
-          <h3 class="text-center">{{ arrRutas.titulo }}</h3>
-          <div>
-            <label>Provincia: </label> <span class="arr">{{ arrRutas.provincia }}</span>
-          </div>
-          <label>Tipo de ruta: </label> <span class="arr">{{ arrRutas.tipoRuta }}</span>
-        </div>
+      <h3 class="text-center">{{ arrRutas.titulo }}</h3>
 
-        <div class="col-6">
-          <label>Usuario: </label> <span class="arr">{{arrRutas.usuario}}</span>
-          <div>
-            <img src="{{arrRutas.imagen}}" class="imagen" *ngIf="!arrRutas.imagen == ''">
-          </div>
-        </div>
-      </div>
+      <label>Provincia: </label> <span class="arr">{{ arrRutas.provincia }}</span> <br>
+
+      <label>Tipo de ruta: </label> <span class="arr">{{ arrRutas.tipoRuta }}</span> <br>
 
     </div>
 

@@ -49,6 +49,7 @@ span{
     color:white;
     margin-left: 8px;
 }
+<<<<<<< HEAD
 
 .imagen{
         border-radius: 50%;
@@ -59,3 +60,5 @@ span{
 select{
     border-radius: .25rem;
 }
+=======
+>>>>>>> parent of 2b358d6... pintado usuarios y foto de usuario en las rutas

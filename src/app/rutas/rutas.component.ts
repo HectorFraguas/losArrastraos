@@ -43,7 +43,7 @@ export class RutasComponent implements OnInit {
         else {
           let tokenAdmin = res['token']
           this.tokenUsuario = JSON.parse(localStorage.getItem('token'))
-          console.log(res)
+          // console.log(res)
           this.ruta = res
 
           this.generateRoute(new google.maps.LatLng(this.ruta.latitud, this.ruta.longitud), new google.maps.LatLng(this.ruta.latllegada, this.ruta.longllegada))
