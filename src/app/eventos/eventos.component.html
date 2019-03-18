@@ -98,7 +98,7 @@
           <label>Usuario: </label><span>{{arrRutas.usuario}}</span>
 
           <div >
-            <img class="imagen" [src]="arrRutas.imagen" alt="">
+            <img class="imagen" [src]="arrRutas.imagen" *ngIf="arrRutas.imagen != null">
           </div>
 
         </div>
