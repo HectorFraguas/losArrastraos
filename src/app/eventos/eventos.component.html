@@ -9,7 +9,7 @@
   <div class="row">
     <div class="col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mb-3">
       <form novalidate [formGroup]="formRegistro" (ngSubmit)="filtrarRutas()">
-        <label>Filtrar por provincia y tipo de ruta</label><br>
+        <label class="filtrado">Filtrar por provincia y tipo de ruta</label><br>
         <select formControlName="provincia" placeholder="Provincia">
           <option value="" disabled selected></option>
           <option value='alava'>Álava</option>
@@ -82,7 +82,7 @@
 
   <div class="row mt-4">
 
-    <div *ngFor="let arrRutas of rutas" [routerLink]="['/ruta', arrRutas.id]" class=" cuadro col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mt-5 mb-3">
+    <div *ngFor="let arrRutas of rutas" [routerLink]="['/ruta', arrRutas.id]" class=" cuadro col-xl-12 col-ml-8 col-xs-6 mx-auto text-center mt-4 mb-3">
 
       <div class="row">
         <div class="col-6">

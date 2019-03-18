@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Knewave');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan|Cuprum:400,700');
+
+/* font-family: 'Knewave', cursive; */
+/* font-family: 'Baloo Chettan', cursive; */
+
+
 *{
     color:white;
 }
 
 .cuadro{
     border: 2px solid #FFC312;
+    background-color: #1F2226;
 }
 
 img{
@@ -22,6 +30,15 @@ img{
 
 h5{
     color:#FFC312 ;
+    font-family: 'Baloo Chettan', cursive;
+}
+
+p{
+    font-family: 'Baloo Chettan', cursive;
+}
+
+label{
+    font-family: 'Baloo Chettan', cursive;
 }
 
 button{
@@ -31,6 +48,7 @@ button{
     cursor: pointer;
     border-radius: .25rem;
     width: 200px;
+    font-family: 'Knewave', cursive;
     
 }
 
@@ -43,5 +61,6 @@ input{
     color:white;
     border: 1px solid #FFC312;
     border-radius: .25rem;
+    font-family: 'Baloo Chettan', cursive;
 }
 

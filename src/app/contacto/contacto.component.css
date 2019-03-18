@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Knewave');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan|Cuprum:400,700');
+
+/* font-family: 'Knewave', cursive; */
+/* font-family: 'Baloo Chettan', cursive; */
+
 .container {
-  background-color: #1F2226;
+  background-color: #808e9b;
+}
+
+h3{
+  font-family: 'Knewave', cursive;
+  color:#1F2226
 }
 
 .row {
@@ -17,7 +28,7 @@
   width: 300px;
   color: #1F2226;
   background-color: #FFC312;
-  border-color: #1F2226;
+  font-family: 'Knewave', cursive;
 }
 
 .input-group-text {

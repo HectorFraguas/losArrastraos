@@ -33,7 +33,7 @@ export class EventosComponent implements OnInit {
 
   filtrarRutas(){
     this.eventosService.filtrarRutas(this.formRegistro.value).subscribe((res) => {
-      console.log(res)
+      // console.log(res)
       this.rutas = res
     })
   }

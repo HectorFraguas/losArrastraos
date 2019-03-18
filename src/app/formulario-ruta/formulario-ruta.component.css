@@ -1,15 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan|Cuprum:400,700');
+@import url('https://fonts.googleapis.com/css?family=Knewave');
+
 label{
     color: #FFC312;
+    font-family: 'Baloo Chettan', cursive;
+    color: #1F2226;
 }
 h2{
-    color:white ;
+    color:#1F2226 ;
+    font-family: 'Knewave', cursive;
+
 }
 
 select option{
-    color: black;
+    color: #1F2226;
 }
 select{
-    color:black;
+    color:#1F2226;
     width: 400px;
     border-radius: .25rem;
 }
@@ -17,10 +24,11 @@ button{
     width: 220px;
     height: 40px;
     background-color:#FFC312;
-    color:black;
+    color:#1F2226;
     border: 0px;
     border-radius: .25rem; 
     cursor: pointer;
+    font-family: 'Knewave', cursive;
 }
 
 input{
@@ -37,7 +45,8 @@ textarea{
 }
 
 .camposComentarios{
-    color: #FFC312;
+    color: #1F2226;
     text-align: center;
     margin-top: 10px;
+    font-family: 'Baloo Chettan', cursive;
 }

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Knewave');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan|Cuprum:400,700');
+
+/* font-family: 'Knewave', cursive; */
+/* font-family: 'Baloo Chettan', cursive; */
+
 .container{
     height: 100%;
     align-content: center;
@@ -10,7 +16,7 @@
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
-    background-color: #1F2226 !important;
+    background-color: #808e9b !important;
     border: 0px !important;
     }
     
@@ -27,11 +33,12 @@
 
     .card-header{
     border: 0px !important;
-    background-color: #1F2226 !important;
+    background-color: #808e9b !important;
     }
     
     .card-header h3{
-    color: white;
+    color: #1F2226;
+    font-family: 'Knewave', cursive;
     }
     
     .social_icon{
@@ -43,7 +50,7 @@
     .input-group-prepend span{
     width: 50px;
     background-color: #FFC312;
-    color: black;
+    color: #1F2226;
     border:0 !important;
     }
     
@@ -66,9 +73,10 @@
     }
     
     .login_btn{
-    color: black;
+    color: #1F2226;
     background-color: #FFC312;
     width: 250px;
+    font-family: 'Knewave', cursive;
     }
     
     .links{
@@ -92,4 +100,5 @@
         color:red;
         font-size: 20px;
         text-align: center;
+        font-family: 'Baloo Chettan', cursive;
     }

@@ -1,29 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Knewave');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan|Cuprum:400,700');
+
+/* font-family: 'Knewave', cursive; */
+/* font-family: 'Baloo Chettan', cursive; */
+
 h3{
-    color:#FFC312;
+    color:#1F2226;
+    font-family: 'Knewave', cursive;
 }
 
 .cuadro{
     border: 2px solid #FFC312;
-    border-radius: .25rem;;
+    border-radius: .25rem;
+    background-color: #1F2226;
 }
 
 label {
     color:#FFC312;
+    font-family: 'Baloo Chettan', cursive;
 }
 
 span{
     color:white;
     margin-left: 8px;
+    font-family: 'Baloo Chettan', cursive;
 }
 
 .eliminar{
     background-color:#FFC312;
-    color:black;
+    color:#1F2226;
     border: 0px;
     width: 130px;
     height: 30px;
     cursor:pointer;
     border-radius: .25rem;
+    font-family: 'Knewave', cursive;
 }
 
 .google{
@@ -35,14 +46,17 @@ span{
 .cajaComentarios{
     border: 2px solid #FFC312;
     border-radius: .25rem;
+    background-color: #1F2226;
 }
 
 .nombreComen{
     color:#FFC312;
+    font-family: 'Knewave', cursive;
 }
 
 .comentario{
     color: white;
+    font-family: 'Baloo Chettan', cursive;
 }
 
 .cajaIntroducirComen{
@@ -52,6 +66,8 @@ span{
     height: 400px;
     margin: 0 auto;
     border-radius: .25rem;
+    color:#1F2226;
+    background-color: #1F2226;
 }
 
 .tituloComen{
@@ -61,22 +77,28 @@ span{
 
 .botonComen{
     background-color:#FFC312;
-    color:black;
+    color:#1F2226;
     border: 0px;
     cursor:pointer;
     height: 35px;
     border-radius: .25rem;
+    font-family: 'Knewave', cursive;
 }
 
 .botonborrarcoment{
     background-color:#FFC312;
-    color:black;
+    color:#1F2226;
     border: 0px;
     cursor:pointer;
     height: 22px;
     border-radius: .25rem;
+    font-family: 'Knewave', cursive;
 }
 
 textarea{
     border-radius: .25rem;
+}
+
+h5{
+    font-family: 'Knewave', cursive;
 }

@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Knewave');
+
+*{
+    font-family: 'Knewave', cursive;
+}
+
+.header{
+  position: fixed;
+  z-index: 99999999;
+  width: 100%;
+
+}
+
 nav img {
   height: 50px;
   width: 250px

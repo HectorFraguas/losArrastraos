@@ -1,34 +1,49 @@
-<div class="container">
-
+<div class="hero">
   <div class="row">
-    <img class="logo col-xl-6 col-ml-8 col-xs-6 mx-auto mb-5" src="../../assets/logoPortada.png" alt="">
+    <img class="logo col-xl-6 col-md-10" src="../../assets/logoPortada.png" alt="">
   </div>
+</div>
 
-  <div class="row">
+<div class="quienes">
+  <div class="container">
+    <div class="row">
+      <p class="texto col-xl-12 col-md-10 col-xs-12 mx-auto text-center"> Los Arrastraos nace en 2012 en Alcalá de Henares de la
+        mano de 4
+        amigos amantes de las motos y aficionados a las rutas y rodadas en circuito.<br>
+        Organizamos y colaboramos en eventos, reuniones y rutas en moto, normalmente por la zona de Madrid y
+        Guadalajara,
+        para disfrutar de curvas y carreteras tranquilas y secundarias... y si además comemos bien, mejor! <br>
+        Si quieres unirte a nosotros, eres Bienvenido!</p>
+    </div>
+  </div>
+</div>
 
-    <div [routerLink]="['/eventos']" class="col-xl-6 col-ml-8 col-xs-12 text-center mx-auto mb-4">
-      <div>
-        <img class="fotoPortada" src="../../assets/portada1.jpg" alt="">
+
+<div class="cuadrosFotos">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div [routerLink]="['/eventos']" class="cuadro col-xl-4 col-ml-8 col-xs-12 text-center mx-auto mb-4">
+        <div>
+          <img class="fotoPortada" src="../../assets/portada1.jpg" alt="">
+        </div>
+        <h4>Eventos</h4>
       </div>
-      <h4>Eventos</h4>
-    </div>
-    <div class="col-xl-6 col-ml-8 col-xs-12 text-center mx-auto mb-4">
-      <div>
-        <img class="fotoPortada" src="../../assets/portada4.jpg" alt="">
+      <div [routerLink]="['/quienes-somos']" class=" cuadro col-xl-4 col-ml-8 col-xs-12 text-center mx-auto mb-4">
+        <div>
+          <img class="fotoPortada" src="../../assets/portada3.jpg" alt="">
+        </div>
+        <h4>Socios del club</h4>
       </div>
-      <h4>Galeria</h4>
-    </div>
-    <div [routerLink]="['/quienes-somos']" class="col-xl-6 col-ml-8 col-xs-12 text-center mx-auto mb-4">
-      <div>
-        <img class="fotoPortada" src="../../assets/portada3.jpg" alt="">
+      <div [routerLink]="['/contacto']" class="cuadro col-xl-4 col-ml-8 col-xs-12 text-center mx-auto mb-4">
+        <div>
+          <img class="fotoPortada" src="../../assets/portada2.jpg" alt="">
+        </div>
+        <h4>Contacto</h4>
       </div>
-      <h4>Quienes somos</h4>
-    </div>
-    <div [routerLink]="['/contacto']" class="col-xl-6 col-ml-8 col-xs-12 text-center mx-auto mb-4">
-      <div>
-        <img class="fotoPortada" src="../../assets/portada2.jpg" alt="">
-      </div>
-      <h4>Contacto</h4>
+
     </div>
 
   </div>

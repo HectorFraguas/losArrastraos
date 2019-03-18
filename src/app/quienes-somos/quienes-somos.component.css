@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Knewave');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan|Cuprum:400,700');
 
+/* font-family: 'Knewave', cursive; */
+/* font-family: 'Baloo Chettan', cursive; */
 
 h2{
-    color: #f8b500;
+    color: #1F2226;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 60px;
+    font-family: 'Knewave', cursive;
 }
 
 h3{
@@ -17,20 +22,16 @@ h3{
 }
 
 h4{
-  color:white;
+  color:#1F2226;
+  font-family: 'Knewave', cursive;
 }
 
 h5{
-  color:white;
+  color:#1F2226;
+  font-family: 'Baloo Chettan', cursive;
 }
-
-.moto{
-  color:#f8b500;
-}
-
 
 .hero {
-  background-color: #1F2226;
   background-size: cover;
   margin-bottom: 50px;
 
@@ -65,4 +66,5 @@ button{
     border: 0px;
     border-radius: .25rem; 
     cursor: pointer;
+    font-family: 'Knewave', cursive;
 }

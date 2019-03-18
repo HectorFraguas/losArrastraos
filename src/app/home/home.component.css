@@ -1,17 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan|Cuprum:400,700');
+
 .logo{
     width: 100%;
-    height: 100%;  
+	height: 100%; 
+	text-align: center;
+	margin: 0 auto;
+	padding-right: 0px !important;
+	padding-left: 0px !important;
 }
 
-.fotoPortada{
-    width: 400px;
+.hero{
+	background-image: url("../../assets/carretera.jpg");
+	background-size: cover;
+	
 }
 
-.col-xl-6 div{
+div{
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+}
+
+.quienes{
+	background-color: #808e9b;
+	color:#1F2226;
+	font-size: 30px;
+	font-family: 'Baloo Chettan', cursive;
+}
+
+.texto{
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+
+.cuadro div{
 	overflow: hidden;
+	border: 5px solid #808e9b;
 }
 
-.col-xl-6 img{
+.cuadro img{
 	width: 100%;
 	height: auto;
 	cursor: pointer;
@@ -19,11 +45,16 @@
 	/* transform: rotateZ(10deg) scale(1.5); */
 }
 
-.col-xl-6 img:hover{
+.cuadro img:hover{
 	transform: rotateZ(10deg) scale(1.5);
 	transition: 1s;
 }
 
 h4{
-	color: #FFC312;
+	color: #1F2226;
+	font-family: 'Baloo Chettan', cursive;
+}
+
+.cuadrosFotos{
+	margin-top: 40px
 }

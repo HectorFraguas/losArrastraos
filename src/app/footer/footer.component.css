@@ -1,20 +1,31 @@
-.footer-copyright{
+.footer{
 	background-color: #1F2226;
 	color: white;
 }
 
-div{
+/* div{
 	background-color: #1F2226;
 	height: 80px;
 	margin-top: 50px;
-}
+} */
 
-footer a{
+.redes a{
 	display: block;
 	width: 30px;
 	height: 30px;
+	padding-top: 20px;
+	font-size: 25px;
+}
+
+.copyright{
+	padding-bottom: 20px;
 }
 
 fa{
 	color:#f8b500;
+}
+
+a{
+	margin-left: 20px;
+	margin-right: 20px;
 }
