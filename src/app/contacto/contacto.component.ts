@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ContactoService } from '../contacto.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'contacto',
@@ -7,14 +10,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactoComponent implements OnInit {
 
-  constructor() { }
+  formRegistro: FormGroup
+
+  mensajeError: string
+
+  constructor(private contactoService: ContactoService, private router: Router) { }
 
   ngOnInit() {
-  }
+    this.formRegistro = new FormGroup({
+
+      nombre: new FormControl('', [
+        Validators.required,
+      ]),
+      email: new FormControl('', [
+        Validators.required,
+      ]),
+      asunto: new FormControl('', [
+        Validators.required,
+        Validators.maxLength(250)
+      ]),
+  })
+}
 
   enviarContacto(){
 
-    
+    this.contactoService.enviarContacto(this.formRegistro.value).subscribe((res) => {
+      this.mensajeError = res
+      alert(this.mensajeError)
+      this.router.navigate(['/home'])
+    })
   }
-
 }

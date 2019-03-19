@@ -1,24 +1,24 @@
 <div class="header">
   <nav class="navbar navbar-expand-lg ">
     <a class="navbar-brand" [routerLink]="['/home']"><img src="../../assets/logoarrastraos.png" alt=""></a>
-    <button class="navbar-toggler btn btn-outline-warning" type="button" data-toggle="collapse" data-target="#navbarNav"
+    <button class="navbar-toggler btn btn-outline-warning" type="button" (click)="isCollapsed = !isCollapsed"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       Menú
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" [ngClass]="{'collapse': isCollapsed}" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/eventos']">Rutas</a>
+          <a class="nav-link" [routerLink]="['/eventos']" (click)="isCollapsed = !isCollapsed">Rutas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/quienes-somos']">Socios</a>
+          <a class="nav-link" [routerLink]="['/quienes-somos']" (click)="isCollapsed = !isCollapsed">Socios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/contacto']">Contacto</a>
+          <a class="nav-link" [routerLink]="['/contacto']" (click)="isCollapsed = !isCollapsed">Contacto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/login']" *ngIf=!this.registrarseService.comprobarToken()>LOG IN</a>
-          <a class="nav-link" [routerLink]="['/perfil']" *ngIf=this.registrarseService.comprobarToken()>PERFIL</a>
+          <a class="nav-link" [routerLink]="['/login']" *ngIf=!this.registrarseService.comprobarToken() (click)="isCollapsed = !isCollapsed">LOG IN</a>
+          <a class="nav-link" [routerLink]="['/perfil']" *ngIf=this.registrarseService.comprobarToken() (click)="isCollapsed = !isCollapsed">PERFIL</a>
         </li>
       </ul>
     </div>

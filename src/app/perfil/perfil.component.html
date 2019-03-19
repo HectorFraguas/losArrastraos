@@ -2,39 +2,50 @@
 
   <div class="cuadro row mt-5" *ngFor="let arrUsu of arrUsuarios">
 
-    <div class="col-xl-6 col-md-6 col-12 mt-3">
+    <div class="col-xl-6 col-md-6 col-12 mt-3 text-center">
 
       <div>
         <img [src]="[arrUsu.imagen]" alt="">
       </div>
-
-      <input class="foto mr-2 mt-3 mb-3" type="file" (change)="onChangeImage($event)">
       <div>
-      <label>Carga de imagen: {{ uploadPercent | async }}%</label>
-    </div>
-      <button class="foto mr-2 mt-3 mb-3 ml-3" (click)="enviarImagen()"  >Cambiar imagen</button>
+        <input class="foto mr-2 mt-3 mb-3" type="file" (change)="onChangeImage($event)">
+      </div>
+      <div>
+        <label>Carga de imagen: {{ uploadPercent | async }}%</label>
+      </div>
+      <button class="foto mr-2 mt-3 mb-3 ml-3" (click)="enviarImagen()">Cambiar imagen</button>
 
     </div>
 
-    <div class="col-xl-6 col-md-6 col-12 mt-4">
-
-      <h5>Nombre: </h5>
+    <div class="col-xl-6 col-md-6 col-12 mt-4 text-center">
+      <div></div>
+      <h5>Nombre</h5>
       <p>{{ arrUsu.nombre }}</p>
 
-      <h5 class="mt-4">Usuario: </h5>
+      <h5 class="mt-4">Usuario</h5>
       <p>{{ arrUsu.usuario }}</p>
 
-      
-        <form novalidate [formGroup]="formRegistro" (ngSubmit)="actualizarUsuario()" >
-          <h5 class="mt-4">Email:</h5><input type="text" value="{{arrUsu.email}}" formControlName="email">
-          <button type="submit" class="mr-2">Guardar</button>
-        </form>
-     
 
-      <div class="mt-4">
-        <button (click)="cerrarSesion()">Cerrar sesión</button>
+      <form novalidate [formGroup]="formRegistro" (ngSubmit)="actualizarUsuario()">
+        <h5 class="mt-4">Email</h5><input type="text" value="{{arrUsu.email}}" formControlName="email">
+        <div class="mt-2 mx-auto">
+        <button type="submit" class="mr-2">Guardar email</button>
       </div>
+      </form>
+
+
+      <!-- <div class="mt-5">
+         <button (click)="cerrarSesion()">Cerrar sesión</button>
+      </div> -->
 
     </div>
+
+    
+
+
+  </div>
+
+  <div>
+    <button (click)="cerrarSesion()">Cerrar sesión</button>
   </div>
 </div>
