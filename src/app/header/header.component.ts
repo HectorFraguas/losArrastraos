@@ -8,14 +8,12 @@ import { RegistrarseService } from '../registrarse.service';
 })
 export class HeaderComponent implements OnInit {
 
-  menu: boolean
+  
   isCollapsed: boolean
 
-  constructor(public registrarseService: RegistrarseService) {
-    this.menu = false
-    this.isCollapsed = true
-  }
+  constructor(public registrarseService: RegistrarseService) { }
 
   ngOnInit() {
+    this.isCollapsed = true
   }
 }

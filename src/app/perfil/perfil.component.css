@@ -52,6 +52,18 @@ button{
     
 }
 
+.cerrarSesion{
+    background-color: #FFC312;
+    color: black;
+    border: black;
+    cursor: pointer;
+    border-radius: .25rem;
+    width: 200px;
+    font-family: 'Knewave', cursive;
+    width: 150px;
+    height: 50px;
+}
+
 input{
     width: 300px;
     color:black;

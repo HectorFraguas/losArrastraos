@@ -1,6 +1,10 @@
 .footer{
 	background-color: #1F2226;
 	color: white;
+	position: relative;
+	top: 22vh;
+	
+	width: 100%;
 }
 
 /* div{

@@ -57,7 +57,7 @@ export class FormularioMiembroComponent implements OnInit {
   enviarSocio(){
     this.formRegistro.value.foto = this.urlImagen
     this.formulariomiembroservice.agregarMiembro(this.formRegistro.value).subscribe((res) => {
-     
+     console.log(res)
       this.router.navigate(['/quienes-somos'])
     })
   }
