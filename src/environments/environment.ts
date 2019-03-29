@@ -11,7 +11,8 @@ export const environment = {
     projectId: "losarrastraos-f55f6",
     storageBucket: "losarrastraos-f55f6.appspot.com",
     messagingSenderId: "868360907460"
-  }
+  },
+  GOOGLE_KEY: "AIzaSyDImU5ERAuVZ_tDEuSvBymmpFL1NnXXTqk"
 };
 
 /*

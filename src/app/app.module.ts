@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { AngularFireModule } from '@angular/fire'
 import { AngularFireStorageModule } from '@angular/fire/storage'
 import { environment } from 'src/environments/environment';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,9 +47,10 @@ import { RutasComponent } from './rutas/rutas.component';
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp (environment.firebase),
-    AngularFireStorageModule
+    AngularFireStorageModule,
+
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

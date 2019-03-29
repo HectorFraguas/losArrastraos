@@ -12,7 +12,8 @@ export class RegistrarseService {
 
   constructor(private httpclient: HttpClient) { 
   
-    this.url = 'http://localhost:3000/login/'
+    // this.url = 'http://localhost:3000/login/'
+    this.url = 'https://back.losarrastraos.com/login/'
   }
 
   enviarRegistro(value){

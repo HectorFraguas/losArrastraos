@@ -15,7 +15,7 @@ export class QuienesSomosComponent implements OnInit {
 
   constructor(private miembrosService: MiembrosService, private router: Router) {
     this.miembrosService.getMiembros().subscribe((res) => {
-      this.tokenAdmin = res[0].token
+      this.tokenAdmin = (res.length != 0)? res[0].token : ""; 
       this.tokenLocal = JSON.parse(localStorage.getItem('token'))
       this.miembros = res
     })

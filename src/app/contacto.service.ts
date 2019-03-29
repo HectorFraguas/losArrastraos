@@ -11,7 +11,8 @@ export class ContactoService {
 
   constructor(private httpClient: HttpClient) { 
 
-    this.url = 'http://localhost:3000/mail'
+    // this.url = 'http://localhost:3000/mail'
+    this.url = 'https://back.losarrastraos.com/mail'
   }
 
   enviarContacto(value){

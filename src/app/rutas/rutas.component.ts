@@ -23,7 +23,7 @@ export class RutasComponent implements OnInit {
   distancia: any
 
 
-  constructor(private eventosService: EventosService, private router: Router, private activatedRoute: ActivatedRoute, private registrarseService: RegistrarseService) {
+  constructor(private eventosService: EventosService, private router: Router, private activatedRoute: ActivatedRoute, public registrarseService: RegistrarseService) {
 
 
   }

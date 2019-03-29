@@ -1,3 +1,5 @@
+
+
 <div class="container">
 
   <div class="row mt-4">
@@ -43,7 +45,7 @@
 
   <div class="row mt-4">
 
-    <h3 *ngIf="!ruta?.comentarios.length == 0">COMENTARIOS</h3>
+    <h3 *ngIf="!(ruta?.comentarios.length == 0)">COMENTARIOS</h3>
 
     <div class=" cajaComentarios col-xl-12 col-ml-8 col-xs-6 mx-auto mb-3" *ngFor="let coment of ruta?.comentarios">
 
@@ -59,7 +61,7 @@
 
 </div>
 
-<div class="cajaIntroducirComen" *ngIf=this.registrarseService.comprobarToken()>
+<div class="cajaIntroducirComen" *ngIf="registrarseService.comprobarToken()">
 
   <h5 class="tituloComen mt-2 mb-3">AGREGA TU COMENTARIO</h5>
 

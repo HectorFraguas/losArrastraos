@@ -34,7 +34,6 @@ export class LogInComponent implements OnInit {
 
   enviarLogin(){
     this.registrarservice.enviarLogin(this.formRegistro.value).subscribe((res) => {
-      
       if(res['error']){
         this.mensajeError = 'Usuario y/o contraseña incorrectos'
       }else{

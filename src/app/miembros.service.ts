@@ -17,12 +17,13 @@ export class MiembrosService {
   constructor(private httpClient: HttpClient,private router: Router) {
 
 
-    this.url = 'http://localhost:3000/socios/'
+  //  this.url = 'http://localhost:3000/socios/'
+    this.url = 'https://back.losarrastraos.com/socios/'
    }
 
    getMiembros(){
 
-   return this.httpClient.get(this.url)
+   return this.httpClient.get<any[]>(this.url)
    }
 
    borrarSocio(miemId){

@@ -14,7 +14,8 @@ export class UsuarioService {
 
   constructor(private httpClient: HttpClient) {
 
-    this.url = 'http://localhost:3000/perfil'
+    // this.url = 'http://localhost:3000/perfil'
+    this.url = 'https://back.losarrastraos.com/perfil'
    }
 
   postUsuario(ptoken) {

@@ -12,7 +12,8 @@ export class FormularioMiembrosService {
 
   constructor(private httpclient: HttpClient) {
 
-    this.url = 'http://localhost:3000/socios/'
+    // this.url = 'http://localhost:3000/socios/'
+    this.url = 'https://back.losarrastraos.com/socios/'
    }
 
    agregarMiembro(value){
