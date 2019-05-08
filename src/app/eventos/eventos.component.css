@@ -34,10 +34,8 @@ h3{
 
 .cuadro{
     border: 2px solid #FFC312;
-    padding: 25px 25px;
     cursor:pointer;
-    border-radius: .25rem;
-    background-color: #1F2226;
+
 }
 
 label {

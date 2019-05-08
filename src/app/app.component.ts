@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { Router, NavigationEnd } from '@angular/router';
 
 declare var google;
 
@@ -8,14 +9,22 @@ declare var google;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
   title = 'losArrastraos';
 
-  google_key: any
 
-  constructor(){
-    // this.google_key = environment.GOOGLE_KEY
-    // console.log(document.getElementsByTagName('head')[0])
-    // document.getElementsByTagName('head')[0].innerHTML = document.getElementsByTagName('head')[0].innerHTML + "<script src='https://maps.googleapis.com/maps/api/js?key="+this.google_key+"&libraries=places'></script>"
+  constructor(private router : Router){
+    
+  }
+
+  ngOnInit(){
+    this.router.events.subscribe((evt) => {
+      if(!(evt instanceof NavigationEnd)){
+        return;
+      }
+      window.scrollTo(0, 0)
+    })
   }
 }
